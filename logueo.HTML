@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<script>
+  function redireccionar() {
+    event.preventDefault(); 
+    window.location.href = "bienvenido.html"; 
+  }
+</script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Ingrese a nuestro sitio</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Dibujo</h1>
+        <!-- action="bienvenido.html" -->
+        <form id="registration-form" onsubmit="redireccionar(event)">
+            <label for="Materiales"> Materiales Necesarios:</label>
+            <label for="Materiales"> Lapiz 3B</label>
+            <label for="Materiales"> Lapiz H1</label>
+            <label for="Materiales"> Lapiz 8B</label>
+            <label for="Materiales"> Lapiz Goma</label>
+            <label for="Materiales"> Goma Maneable</label>
+            <label for="Materiales"> ---------------------</label>
+            <div>
+                <label for="Materiales">Ingrese Materiales que usted posee</label>
+                <label for="Materiales">lo que le permitira continuar :</label>
+                <input type="text" id="text" >
+            </div>
+            <div>
+                <label for="Materiales"> ---------------------</label>
+                <label for="Materiales">Ya poseo los Elementos Necesarios:</label>
+                
+            </div>
+           
+            <button type="submit">Continuar</button>
+        </form>
+    </div>
+</body>
+</html>
