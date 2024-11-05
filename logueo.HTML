@@ -13,22 +13,21 @@
     <div class="container">
         <h1>Dibujo</h1>
 
-        <form id="registration-form" onsubmit="iniciarFormulario()">
-            <label > Materiales Necesarios:</label>
-            <label > Lapiz_3B</label>
-            <label > Lapiz_H1</label>
-            <label > Lapiz_8B</label>
-            <label > Lapiz_Goma</label>
-            <label > Goma_Maneable</label>
-            <label > ---------------------</label>
+        <form id="registration-form">
+            <ul>
+                <li>Lapiz 3B</li>
+                <li>Lapiz H1</li>
+                <li>Lapiz 8B</li>
+                <li>Lapiz Goma</li>
+                <li>Goma Maneable</li>
+            </ul>
             <div>
-                <label >Elegir preferido de los antes mencionados</label>
-                <label >lo que le permitira continuar :</label>
-                <input type="text" id="text" > </input>
+                <label for="preferido">Elegir preferido de los mencionados:</label>
+                <input type="text" id="preferido" name="preferido" placeholder="Escribe tu material preferido">
             </div>
             <div>
-                <label > ---------------------</label>
-                <label >Ya poseo los Elementos Necesarios:</label>
+                <li > ---------------------</li>
+                <li >Ya poseo los Elementos Necesarios:</li>
                 
             </div>
            
@@ -36,7 +35,7 @@
         </form>
     </div>
     <div class="container2">
-        <label for="Materiales"> "Te llevaremos por este curso a desarrollar tu don artistico"</label>
+        <li > "Te llevaremos por este curso a desarrollar tu don artistico"</li>
     </div>
 </body>
 </html>
