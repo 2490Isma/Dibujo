@@ -22,7 +22,10 @@ body {
 }
 
 .container2{
-    position: left;
+    font-family: monospace;
+    position: absolute;
+    top: 0;
+    right: 0;
     background-color: white;
 
     border-radius: 30px; /* Esquinas redondeadas */
@@ -30,6 +33,20 @@ body {
     width: 300px; /* Ancho fijo para la caja */
     text-align: center; /* Centrar texto */
 }
+.container3{
+    font-family: monospace;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: white;
+
+    border-radius: 30px; /* Esquinas redondeadas */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    width: 300px; /* Ancho fijo para la caja */
+    text-align: center; /* Centrar texto */
+}
+
+
 
 
 /* Encabezados */
