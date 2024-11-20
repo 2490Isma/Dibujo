@@ -19,8 +19,44 @@ function enviarDatos(event) {
     const data = { preferido };
     console.log(data);  // Mostrar los datos en la consola
 
-    // respuesta exitosa
-    console.log('Datos enviados correctamente'); // imprime en consola, se ve apretando f12 en el navegador y yendo a consola
-    alert('Su material preferido es: ' + preferido);
+    // Enviar los datos al servidor
+    fetch('/logueo', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json', // Asegúrate de que es JSON
+        },
+        body: JSON.stringify(data), // Convertir el objeto en una cadena JSON
+    })
+    .then(preferido => {
+        if (!preferido.ok) {
+            throw new Error('No ha seleccionado el preferido');
+        }
+        return response.text();
+    })
+    .then(data => {
+        window.location.href = '/bienvenido';
+    })
+    .catch(error => {
+        mostrarErrorModal(error.message);
+    });
+
+ // Función para mostrar el modal con el error
+function mostrarErrorModal(mensaje) {
+    const modal = document.getElementById('miModal');
+    const modalMessage = document.getElementById('modal-message');
+    modalMessage.textContent = mensaje;
+    modal.style.display = 'block'; // Mostrar el modal
+}
+
+// Función para cerrar el modal
+function cerrarModal() {
+    const modal = document.getElementById('miModal');
+    modal.style.display = 'none'; // Ocultar el modal
+}
+
+
+function volver() {
+    window.history.back();
+}
 
     }
